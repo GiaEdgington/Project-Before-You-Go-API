@@ -20,11 +20,11 @@ user4= User.create(username:"HariSeldon", password:"124")
 
 destination1= Destination.create(name:"Mexico", user_id: user1.id)
 
-destination2= Destination.create(name:"Hell", user_id: user2.id)
+destination2= Destination.create(name:"Cuba", user_id: user2.id)
 
-destination3= Destination.create(name:"Montecristo", user_id: user3.id)
+destination3= Destination.create(name:"Italy", user_id: user3.id)
 
-destination4= Destination.create(name:"Trantor", user_id: user4.id)
+destination4= Destination.create(name:"Argentina", user_id: user4.id)
 
 book1= Book.create(title:"Frida", author:"Frida", image:"https://s3-us-west-1.amazonaws.com/tprs-books/wp-content/uploads/2016/05/27155204/Frida-Kahlo.jpg", synopsis:"whatever", destination_id: destination1.id)
 

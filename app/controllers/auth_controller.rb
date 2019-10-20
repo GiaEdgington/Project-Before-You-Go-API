@@ -8,7 +8,7 @@ class AuthController < ApplicationController
         payload = { user_id: user.id }
         token = JWT.encode(payload, 'secretkeywhatever', 'HS256')
 
-        render json: { token: token }
+        render json: { token: token, username: user.username, id: user.id }
 
        else
         render json: { errors: ["Wrong username or password"]}, status: :unprocessable_entity

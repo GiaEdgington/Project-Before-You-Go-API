@@ -1,12 +1,8 @@
 class DestinationsController < ApplicationController
 
     def index
-        if authenticated?
         destinations = Destination.all 
         render json: destinations, include: :books
-        else
-            tell_user_to_go_away!
-        end
     end
 
     def create
@@ -22,6 +18,7 @@ class DestinationsController < ApplicationController
     def destroy
         destination = Destination.find(params[:id])
         destination.destroy
+        render json: { status: true }
     end
 
     private
@@ -29,17 +26,4 @@ class DestinationsController < ApplicationController
         params.require(:destination).permit(:name, :user_id)
     end
 
-    def authenticated?
-        token = request.headers["Authorization"]
-        if token.present?
-            begin
-                decoded_token = JWT.decode(token. "token", true, {...})
-            rescue JWT::VerificationError
-                return false
-            end
-            return true
-        else
-            false
-        end
-    end
 end

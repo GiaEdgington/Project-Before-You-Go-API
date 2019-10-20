@@ -30,6 +30,11 @@ class UsersController < ApplicationController
 
     end
 
+    def show
+      user = User.find(params[:id])
+      render json: user, include: :destinations
+    end
+
     private
     def user_params
         params.permit(:username, :password)

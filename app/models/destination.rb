@@ -1,9 +1,4 @@
 class Destination < ApplicationRecord
   belongs_to :user
-  has_many :books
-
-  def serializable_hash(opts)
-    super(opts.merge(only: [:id, :name]))
-  end
-  
+  has_many :books, dependent: :destroy
 end

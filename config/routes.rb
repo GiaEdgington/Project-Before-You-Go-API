@@ -4,9 +4,6 @@ Rails.application.routes.draw do
   post '/signup', to: 'users#create'
   get '/homepage', to: 'users#homepage'
 
-
-
-
   get '/persist', to: 'tokens#persist'
 
   resources :books

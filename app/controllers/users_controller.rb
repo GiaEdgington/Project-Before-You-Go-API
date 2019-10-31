@@ -29,7 +29,7 @@ class UsersController < ApplicationController
       render json: user
 
     end
-
+    # show page for user
     def show
       user = User.find(params[:id])
       render json: user, include: :destinations

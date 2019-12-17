@@ -4,7 +4,7 @@ This app allows users to pick a trip destination and returns location-based book
 
 ## Goal
 
-Create a Rails restfulAPI with endpoints for users, Trips and Books.
+Create a Rails restful API with endpoints for users, Trips and Books.
 
 ## Getting Started:
 

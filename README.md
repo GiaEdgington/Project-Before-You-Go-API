@@ -1,24 +1,30 @@
-# README
+# Before You Go - Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app allows users to pick a trip destination and returns location-based book recommendations, enhancing awareness of the area’s culture and history prior to or during travel.
 
-Things you may want to cover:
+## Goal
 
-* Ruby version
+Create a Rails restfulAPI with endpoints for users, Trips and Books.
 
-* System dependencies
+## Getting Started:
 
-* Configuration
+* Run bundle install for dependencies
+* Run "rails db:migrate" to migrate your database
+* Run "rails db:seed" to seed various products and users
+* Run "rails s" to run your server
 
-* Database creation
+Go to https://github.com/GiaEdgington/Project-Before-You-Go for frontend.
 
-* Database initialization
+Open [http://localhost:3000] if you want to view it in the browser.
 
-* How to run the test suite
+## Built with:
 
-* Services (job queues, cache servers, search engines, etc.)
+* Ruby on Rails
 
-* Deployment instructions
+* PostgreSQL
 
-* ...
+* JSON Web Token
+
+* React
+
+* CSS
